@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
+// const morgan = require("morgan");
 app.use(express.json());
+
 let phonebookData = [
   {
     id: "1",
@@ -25,7 +27,12 @@ let phonebookData = [
 ];
 // const phonebookData = require("./data/phonebookData.js");
 
+app.get("/api/secretmessage", (request, response) => {
+  response.send("<p>Caspar the Best</p>");
+});
+
 app.get("/api/persons", (request, response) => {
+  morgan("tiny");
   response.json(phonebookData);
 });
 
