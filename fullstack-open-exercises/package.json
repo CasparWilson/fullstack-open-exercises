@@ -4,6 +4,7 @@
   "main": "index.js",
   "repository": "git@github.com:CasparWilson/fullstack-open-exercises.git",
   "author": "Caspar",
+  "license": "UNLICENSED",
   "private": false,
   "dependencies": {
     "express": "^4.19.2"
