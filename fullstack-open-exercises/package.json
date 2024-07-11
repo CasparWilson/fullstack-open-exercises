@@ -1,0 +1,9 @@
+{
+  "name": "fullstack-open-exercises",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:CasparWilson/fullstack-open-exercises.git",
+  "author": "Caspar",
+  "license": "none",
+  "private": false
+}
