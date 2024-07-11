@@ -32,7 +32,7 @@ app.get("/api/secretmessage", (request, response) => {
 });
 
 app.get("/api/persons", (request, response) => {
-  morgan("tiny");
+  //   morgan("tiny");
   response.json(phonebookData);
 });
 
