@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
-// const morgan = require("morgan");
+const morgan = require("morgan");
 app.use(express.json());
+app.use(morgan("tiny"));
 
 let phonebookData = [
   {
@@ -32,7 +33,6 @@ app.get("/api/secretmessage", (request, response) => {
 });
 
 app.get("/api/persons", (request, response) => {
-  //   morgan("tiny");
   response.json(phonebookData);
 });
 
@@ -83,10 +83,12 @@ app.post("/api/persons", (request, response) => {
     }
   }
 
+  randomID = Math.ceil(Math.random() * 1000);
+
   const newEntry = {
     name: body.name,
     number: body.number,
-    id: Math.ceil(Math.random() * 1000),
+    id: Math.toString(randomID),
   };
 
   phonebookData = phonebookData.concat(newEntry);
